@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html><head><meta charset="utf-8"><title>Algebra.Prelude</title><link rel="stylesheet" href="/css/agda-cats.css"></head><body><pre class="Agda"><a id="1" class="Keyword">module</a> <a id="8" href="Algebra.Prelude.html" class="Module">Algebra.Prelude</a> <a id="24" class="Keyword">where</a>
+
+<a id="31" class="Keyword">open</a> <a id="36" class="Keyword">import</a> <a id="43" href="Cat.Instances.Shape.Terminal.html" class="Module">Cat.Instances.Shape.Terminal</a> <a id="72" class="Keyword">public</a>
+<a id="79" class="Keyword">open</a> <a id="84" class="Keyword">import</a> <a id="91" href="Cat.Functor.FullSubcategory.html" class="Module">Cat.Functor.FullSubcategory</a> <a id="119" class="Keyword">public</a>
+<a id="126" class="Keyword">open</a> <a id="131" class="Keyword">import</a> <a id="138" href="Cat.Thin.Instances.Sub.html" class="Module">Cat.Thin.Instances.Sub</a> <a id="161" class="Keyword">public</a>
+<a id="168" class="Keyword">open</a> <a id="173" class="Keyword">import</a> <a id="180" href="Cat.Instances.Product.html" class="Module">Cat.Instances.Product</a> <a id="202" class="Keyword">public</a>
+<a id="209" class="Keyword">open</a> <a id="214" class="Keyword">import</a> <a id="221" href="Cat.Instances.Functor.html" class="Module">Cat.Instances.Functor</a> <a id="243" class="Keyword">public</a>
+<a id="250" class="Keyword">open</a> <a id="255" class="Keyword">import</a> <a id="262" href="Cat.Instances.Comma.html" class="Module">Cat.Instances.Comma</a> <a id="282" class="Keyword">public</a>
+<a id="289" class="Keyword">open</a> <a id="294" class="Keyword">import</a> <a id="301" href="Cat.Instances.Slice.html" class="Module">Cat.Instances.Slice</a> <a id="321" class="Keyword">public</a>
+<a id="328" class="Keyword">open</a> <a id="333" class="Keyword">import</a> <a id="340" href="Cat.Functor.Adjoint.html" class="Module">Cat.Functor.Adjoint</a> <a id="360" class="Keyword">public</a>
+<a id="367" class="Keyword">open</a> <a id="372" class="Keyword">import</a> <a id="379" href="Cat.Functor.Base.html" class="Module">Cat.Functor.Base</a> <a id="396" class="Keyword">public</a>
+<a id="403" class="Keyword">open</a> <a id="408" class="Keyword">import</a> <a id="415" href="Cat.Functor.Hom.html" class="Module">Cat.Functor.Hom</a> <a id="431" class="Keyword">public</a>
+<a id="438" class="Keyword">open</a> <a id="443" class="Keyword">import</a> <a id="450" href="Cat.Univalent.html" class="Module">Cat.Univalent</a> <a id="464" class="Keyword">public</a>
+<a id="471" class="Keyword">open</a> <a id="476" class="Keyword">import</a> <a id="483" href="Cat.Prelude.html" class="Module">Cat.Prelude</a> <a id="495" class="Keyword">hiding</a> <a id="502" class="Symbol">(</a><a data-type="Nat → Nat → Nat" id="503" href="Agda.Builtin.Nat.html#325" class="Primitive Operator">_+_</a> <a id="507" class="Symbol">;</a> <a data-type="Nat → Nat → Nat" id="509" href="Agda.Builtin.Nat.html#415" class="Primitive Operator">_-_</a> <a id="513" class="Symbol">;</a> <a data-type="Nat → Nat → Nat" id="515" href="Agda.Builtin.Nat.html#528" class="Primitive Operator">_*_</a><a id="518" class="Symbol">)</a> <a id="520" class="Keyword">public</a>
+<a id="527" class="Keyword">open</a> <a id="532" class="Keyword">import</a> <a id="539" href="Cat.Thin.html" class="Module">Cat.Thin</a> <a id="548" class="Keyword">using</a> <a id="554" class="Symbol">(</a><a data-type="(o h : Level) → Type (lsuc o ⊔ lsuc h)" id="555" href="Cat.Thin.html#3489" class="Record">Poset</a> <a id="561" class="Symbol">;</a> <a data-type="(o h : Level) → Type (lsuc o ⊔ lsuc h)" id="563" href="Cat.Thin.html#989" class="Record">Proset</a><a id="569" class="Symbol">)</a> <a id="571" class="Keyword">public</a>
+
+<a id="579" class="Keyword">import</a> <a id="586" href="Cat.Diagram.Coequaliser.html" class="Module">Cat.Diagram.Coequaliser</a>
+<a id="610" class="Keyword">import</a> <a id="617" href="Cat.Diagram.Coproduct.html" class="Module">Cat.Diagram.Coproduct</a>
+<a id="639" class="Keyword">import</a> <a id="646" href="Cat.Diagram.Equaliser.html" class="Module">Cat.Diagram.Equaliser</a>
+<a id="668" class="Keyword">import</a> <a id="675" href="Cat.Diagram.Pullback.html" class="Module">Cat.Diagram.Pullback</a>
+<a id="696" class="Keyword">import</a> <a id="703" href="Cat.Diagram.Terminal.html" class="Module">Cat.Diagram.Terminal</a>
+<a id="724" class="Keyword">import</a> <a id="731" href="Cat.Diagram.Initial.html" class="Module">Cat.Diagram.Initial</a>
+<a id="751" class="Keyword">import</a> <a id="758" href="Cat.Diagram.Pushout.html" class="Module">Cat.Diagram.Pushout</a>
+<a id="778" class="Keyword">import</a> <a id="785" href="Cat.Diagram.Product.html" class="Module">Cat.Diagram.Product</a>
+<a id="805" class="Keyword">import</a> <a id="812" href="Cat.Diagram.Image.html" class="Module">Cat.Diagram.Image</a>
+<a id="830" class="Keyword">import</a> <a id="837" href="Cat.Diagram.Zero.html" class="Module">Cat.Diagram.Zero</a>
+<a id="854" class="Keyword">import</a> <a id="861" href="Cat.Reasoning.html" class="Module">Cat.Reasoning</a>
+
+<a id="876" class="Keyword">module</a> <a id="Cat"></a><a id="883" href="Algebra.Prelude.html#883" class="Module">Cat</a> <a id="887" class="Symbol">{</a><a id="888" href="Algebra.Prelude.html#888" class="Bound">o</a> <a id="890" href="Algebra.Prelude.html#890" class="Bound">ℓ</a><a id="891" class="Symbol">}</a> <a id="893" class="Symbol">(</a><a id="894" href="Algebra.Prelude.html#894" class="Bound">C</a> <a id="896" class="Symbol">:</a> <a data-type="(o h : Level) → Type (lsuc o ⊔ lsuc h)" id="898" href="Cat.Base.html#704" class="Record">Precategory</a> <a id="910" href="Algebra.Prelude.html#888" class="Bound">o</a> <a id="912" href="Algebra.Prelude.html#890" class="Bound">ℓ</a><a id="913" class="Symbol">)</a> <a id="915" class="Keyword">where</a>
+  <a id="923" class="Keyword">open</a> <a id="928" href="Cat.Diagram.Coequaliser.html" class="Module">Cat.Diagram.Coequaliser</a> <a id="952" href="Algebra.Prelude.html#894" class="Bound">C</a> <a id="954" class="Keyword">public</a>
+  <a id="963" class="Keyword">open</a> <a id="968" href="Cat.Diagram.Coproduct.html" class="Module">Cat.Diagram.Coproduct</a> <a id="990" href="Algebra.Prelude.html#894" class="Bound">C</a> <a id="992" class="Keyword">public</a>
+  <a id="1001" class="Keyword">open</a> <a id="1006" href="Cat.Diagram.Equaliser.html" class="Module">Cat.Diagram.Equaliser</a> <a id="1028" href="Algebra.Prelude.html#894" class="Bound">C</a> <a id="1030" class="Keyword">public</a>
+  <a id="1039" class="Keyword">open</a> <a id="1044" href="Cat.Diagram.Pullback.html" class="Module">Cat.Diagram.Pullback</a> <a id="1065" href="Algebra.Prelude.html#894" class="Bound">C</a> <a id="1067" class="Keyword">public</a>
+  <a id="1076" class="Keyword">open</a> <a id="1081" href="Cat.Diagram.Terminal.html" class="Module">Cat.Diagram.Terminal</a> <a id="1102" href="Algebra.Prelude.html#894" class="Bound">C</a> <a id="1104" class="Keyword">public</a>
+  <a id="1113" class="Keyword">open</a> <a id="1118" href="Cat.Diagram.Initial.html" class="Module">Cat.Diagram.Initial</a> <a id="1138" href="Algebra.Prelude.html#894" class="Bound">C</a> <a id="1140" class="Keyword">public</a>
+  <a id="1149" class="Keyword">open</a> <a id="1154" href="Cat.Diagram.Pushout.html" class="Module">Cat.Diagram.Pushout</a> <a id="1174" href="Algebra.Prelude.html#894" class="Bound">C</a> <a id="1176" class="Keyword">public</a>
+  <a id="1185" class="Keyword">open</a> <a id="1190" href="Cat.Diagram.Product.html" class="Module">Cat.Diagram.Product</a> <a id="1210" href="Algebra.Prelude.html#894" class="Bound">C</a> <a id="1212" class="Keyword">public</a>
+  <a id="1221" class="Keyword">open</a> <a id="1226" href="Cat.Diagram.Image.html" class="Module">Cat.Diagram.Image</a> <a id="1244" href="Algebra.Prelude.html#894" class="Bound">C</a> <a id="1246" class="Keyword">public</a>
+  <a id="1255" class="Keyword">open</a> <a id="1260" href="Cat.Diagram.Zero.html" class="Module">Cat.Diagram.Zero</a> <a id="1277" href="Algebra.Prelude.html#894" class="Bound">C</a> <a id="1279" class="Keyword">public</a>
+  <a id="1288" class="Keyword">open</a> <a id="1293" href="Cat.Reasoning.html" class="Module">Cat.Reasoning</a> <a id="1307" href="Algebra.Prelude.html#894" class="Bound">C</a> <a id="1309" class="Keyword">public</a>
+</pre></body></html>

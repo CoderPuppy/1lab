@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <meta charset="utf-8"></meta>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-  <meta name="keywords" content="Agda,categories,topos"></meta>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Agda,categories,topos" />
 
   <title>1Lab.Type - 1Lab</title>
 
-  <link rel="stylesheet" href="/css/default.css"></link>
-  <link rel="stylesheet" href="/css/katex.min.css"></link>
-  <link rel="stylesheet" href="/css/agda-cats.css"></link>
+  <link rel="stylesheet" href="/css/default.css" />
+  <link rel="stylesheet" href="/css/katex.min.css" />
+  <link rel="stylesheet" href="/css/agda-cats.css" />
 
-  <meta name="twitter:card" content="summary"></meta>
-  <meta name="twitter:title" content="1Lab.Type - 1Lab"></meta>
-  <meta name="twitter:image" content="https://cubical.1lab.dev/static/cube-128x.png"></meta>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1Lab.Type - 1Lab" />
+  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png" />
 
-  <meta name="og:title" content="1Lab.Type - 1Lab"></meta>
-  <meta name="og:image" content="https://cubical.1lab.dev/static/cube-128x.png"></meta>
-  <meta name="og:site-name" content="The 1Lab"></meta>
-  <meta name="og:type" content="website"></meta>
-    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
+  <meta name="og:title" content="1Lab.Type - 1Lab" />
+  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png" />
+  <meta name="og:site-name" content="1Lab" />
+  <meta name="og:type" content="website" />
+
+    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory." />
   
-  <script src="/equations.js" type="text/javascript"></script> 
-  <script src="/highlight-hover.js" type="text/javascript"></script>
+  <script src="/equations.js"></script>
+  <script src="/highlight-hover.js"></script>
 
   <noscript>
     <style>
@@ -37,6 +38,11 @@
       }
     </style>
   </noscript>
+
+  <!-- Google font embeds -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&amp;family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -45,51 +51,54 @@
 
   <!-- Table of contents (only if the page has a table of contents) -->
     <aside id="toc">
-    <div id="toc-container" style="min-width: 10em;">
+    <div id="toc-container" style="min-width: 10em; font-size: 15pt;">
       <!-- Title for the page -->
-      <h3 class="Agda" style="margin-top: 0; margin-bottom: 0;">
+      <h3 class="Agda" style="margin-top: 0; margin-bottom: 0; white-space: pre;">
                 <a class="Module">1Lab.Type</a>
               </h3>
 
       <!-- Cube logo -->
-      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto; height: 32px;"></img>
-      
+      <a id="logo" href="/">
+        <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px" />
+      </a>
+
       <!-- Actual table of contents (separated from the rest by
       horizontal rules) -->
-      <hr></hr>
-      <ul class="incremental">
+      <hr />
+      <ul>
       <li><a href="#universes"><a href="#universes" class="header-link">Universes<span class="header-link-emoji">🔗</span></a></a>
-      <ul class="incremental">
+      <ul>
       <li><a href="#built-in-types"><a href="#built-in-types" class="header-link">Built-in Types<span class="header-link-emoji">🔗</span></a></a></li>
       <li><a href="#lifting"><a href="#lifting" class="header-link">Lifting<span class="header-link-emoji">🔗</span></a></a></li>
       <li><a href="#function-composition"><a href="#function-composition" class="header-link">Function composition<span class="header-link-emoji">🔗</span></a></a></li>
       </ul></li>
       </ul>
-      <hr></hr>
+      <hr />
 
       <!-- Sidebar controls -->
       <div style="display: flex; gap: 0.25em; flex-flow: row wrap;">
         <!-- Sidebar equations control -->
-        <span class="equations" style="display: flex; gap: 0.25em; flex-wrap: nowrap;">
+        <span class="equations" style="display: flex; align-items: center; gap: 0.25em; flex-wrap: nowrap;">
           <input name="sidebar-eqns" type="checkbox" class="equations" id="sidebar-eqns">
           <label for="sidebar-eqns">Equations</label>
         </span>
 
         <!-- Sidebar fonts control -->
-        <span style="display: flex; gap: 0.25em; flex-wrap: nowrap;">
+        <span style="display: flex; align-items: center; gap: 0.25em; flex-wrap: nowrap;">
           <input name="sidebar-font" type="checkbox" id="toggle-fonts">
           <label for="toggle-fonts">Serif Font</label>
         </span>
       </div>
 
-      <hr></hr>
+      <hr />
 
       <!-- Navbar navigation (lol) -->
       <div id="return" style="white-space: nowrap;">
-              <a href="index.html">️back to index</a> <br />
+              <a href="/">back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/b2048560d21fe589017dd874210830f1f0485570/src/1Lab/Type.lagda.md">link to source</a> <br />
-      </div>
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/63330a2fc4d93c644e1f6cd9791511e4037b7392/src/1Lab/Type.lagda.md">link to source</a> <br />
+                <hr /> <div class="author-list">Written by Amélia, Amélia Liao and Reed Mullanix</div> <br />
+              </div>
     </div>
   </aside>
   
@@ -98,7 +107,7 @@
     <div class="narrow-only" id="article-nav">
       <!-- Index return anchor (only if the page is not the index) -->
             <div id="return">
-        <a href="index.html">️back to index</a>
+        <a href="/">back to index</a>
       </div>
       
       <!-- Font toggle checkbox -->
@@ -111,74 +120,85 @@
 <pre class="Agda"><a id="9" class="Keyword">module</a> <a id="16" href="1Lab.Type.html" class="Module">1Lab.Type</a> <a id="26" class="Keyword">where</a>
 </pre>
 <h1 id="universes"><a href="#universes" class="header-link">Universes<span class="header-link-emoji">🔗</span></a></h1>
-<p>A <strong>universe</strong> is a type whose inhabitants are types. In Agda, there is a family of universes, which, by default, is called <code>Set</code>. Rather recently, Agda gained [a flag] to make <code>Set</code> not act like a keyword, and allow renaming it in an import declaration from the <code>Agda.Primitive</code> module.</p>
-<pre class="Agda"><a id="348" class="Keyword">open</a> <a id="353" class="Keyword">import</a> <a id="360" href="Agda.Primitive.html" class="Module">Agda.Primitive</a>
-  <a id="377" class="Keyword">renaming</a> <a id="386" class="Symbol">(</a><a data-type="Type₁" id="387" href="Agda.Primitive.html#326" class="Primitive">Set</a> <a id="391" class="Symbol">to</a> <a id="394" class="Primitive">Type</a> <a id="399" class="Symbol">;</a> <a data-type="Typeω₁" id="401" href="Agda.Primitive.html#381" class="Primitive">Setω</a> <a id="406" class="Symbol">to</a> <a id="409" class="Primitive">Typeω</a><a id="414" class="Symbol">)</a>
-  <a id="418" class="Keyword">hiding</a> <a id="425" class="Symbol">(</a><a data-type="Type₁" id="426" href="Agda.Primitive.html#351" class="Primitive">Prop</a><a id="430" class="Symbol">)</a>
-  <a id="434" class="Keyword">public</a>
+<p>A <strong>universe</strong> is a type whose inhabitants are types. In Agda, there is a family of universes, which, by default, is called <code>Set</code>. Rather recently, Agda gained a flag to make <code>Set</code> not act like a keyword, and allow renaming it in an import declaration from the <code>Agda.Primitive</code> module.</p>
+<pre class="Agda"><a id="345" class="Keyword">open</a> <a id="350" class="Keyword">import</a> <a id="357" href="Agda.Primitive.html" class="Module">Agda.Primitive</a>
+  <a id="374" class="Keyword">renaming</a> <a id="383" class="Symbol">(</a><a id="384" href="Agda.Primitive.html#326" class="Primitive">Set</a> <a id="388" class="Symbol">to</a> <a id="391" class="Primitive">Type</a> <a id="396" class="Symbol">;</a> <a id="398" href="Agda.Primitive.html#381" class="Primitive">Setω</a> <a id="403" class="Symbol">to</a> <a id="406" class="Primitive">Typeω</a><a id="411" class="Symbol">)</a>
+  <a id="415" class="Keyword">hiding</a> <a id="422" class="Symbol">(</a><a data-type="Type₁" id="423" href="Agda.Primitive.html#351" class="Primitive">Prop</a><a id="427" class="Symbol">)</a>
+  <a id="431" class="Keyword">public</a>
 </pre>
-<p><span class="Agda"><a href="1Lab.Type.html#394" class="Primitive">Type</a></span> is a type itself, so it’s a natural question to ask: does it belong to a universe? The answer is <em>yes</em>. However, Type can not belong to itself, or we could reproduce Russell’s Paradox, as is done <a href="1Lab.Counterexamples.Russell.html">in this module</a>.</p>
+<p><span class="Agda"><a href="1Lab.Type.html#391" class="Primitive">Type</a></span> is a type itself, so it’s a natural question to ask: does it belong to a universe? The answer is <em>yes</em>. However, Type can not belong to itself, or we could reproduce Russell’s Paradox, as is done <a href="1Lab.Counterexamples.Russell.html">in this module</a>.</p>
 <p>To prevent this, the universes are parametrised by a <em><span class="Agda"><a data-type="Type" href="Agda.Primitive.html#597" class="Postulate">Level</a></span></em>, where the collection of all <code>ℓ</code>-sized types is <code>Type (lsuc ℓ)</code>:</p>
-<pre class="Agda"><a id="874" href="1Lab.Type.html#874" class="Function">_</a> <a id="876" class="Symbol">:</a> <a id="878" class="Symbol">(</a><a id="879" href="1Lab.Type.html#879" class="Bound">ℓ</a> <a id="881" class="Symbol">:</a> <a data-type="Type" id="883" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="888" class="Symbol">)</a> <a id="890" class="Symbol">→</a> <a id="892" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="897" class="Symbol">(</a><a data-type="Level → Level" id="898" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="903" href="1Lab.Type.html#879" class="Bound">ℓ</a><a id="904" class="Symbol">)</a>
-<a id="906" class="Symbol">_</a> <a id="908" class="Symbol">=</a> <a id="910" class="Symbol">λ</a> <a id="912" href="1Lab.Type.html#912" class="Bound">ℓ</a> <a id="914" class="Symbol">→</a> <a id="916" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="921" href="1Lab.Type.html#912" class="Bound">ℓ</a>
+<pre class="Agda"><a id="871" href="1Lab.Type.html#871" class="Function">_</a> <a id="873" class="Symbol">:</a> <a id="875" class="Symbol">(</a><a id="876" href="1Lab.Type.html#876" class="Bound">ℓ</a> <a id="878" class="Symbol">:</a> <a data-type="Type" id="880" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="885" class="Symbol">)</a> <a id="887" class="Symbol">→</a> <a id="889" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="894" class="Symbol">(</a><a data-type="Level → Level" id="895" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="900" href="1Lab.Type.html#876" class="Bound">ℓ</a><a id="901" class="Symbol">)</a>
+<a id="903" class="Symbol">_</a> <a id="905" class="Symbol">=</a> <a id="907" class="Symbol">λ</a> <a id="909" href="1Lab.Type.html#909" class="Bound">ℓ</a> <a id="911" class="Symbol">→</a> <a id="913" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="918" href="1Lab.Type.html#909" class="Bound">ℓ</a>
 
-<a id="level-of"></a><a data-type="Type ℓ → Level" id="924" href="1Lab.Type.html#924" class="Function">level-of</a> <a id="933" class="Symbol">:</a> <a id="935" class="Symbol">{</a><a id="936" href="1Lab.Type.html#936" class="Bound">ℓ</a> <a id="938" class="Symbol">:</a> <a data-type="Type" id="940" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="945" class="Symbol">}</a> <a id="947" class="Symbol">→</a> <a id="949" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="954" href="1Lab.Type.html#936" class="Bound">ℓ</a> <a id="956" class="Symbol">→</a> <a data-type="Type" id="958" href="Agda.Primitive.html#597" class="Postulate">Level</a>
-<a data-type="Type ℓ → Level" id="964" href="1Lab.Type.html#924" class="Function">level-of</a> <a id="973" class="Symbol">{</a><a id="974" href="1Lab.Type.html#974" class="Bound">ℓ</a><a id="975" class="Symbol">}</a> <a id="977" class="Symbol">_</a> <a id="979" class="Symbol">=</a> <a id="981" href="1Lab.Type.html#974" class="Bound">ℓ</a>
+<a id="level-of"></a><a data-type="Type ℓ → Level" id="921" href="1Lab.Type.html#921" class="Function">level-of</a> <a id="930" class="Symbol">:</a> <a id="932" class="Symbol">{</a><a id="933" href="1Lab.Type.html#933" class="Bound">ℓ</a> <a id="935" class="Symbol">:</a> <a data-type="Type" id="937" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="942" class="Symbol">}</a> <a id="944" class="Symbol">→</a> <a id="946" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="951" href="1Lab.Type.html#933" class="Bound">ℓ</a> <a id="953" class="Symbol">→</a> <a data-type="Type" id="955" href="Agda.Primitive.html#597" class="Postulate">Level</a>
+<a data-type="Type ℓ → Level" id="961" href="1Lab.Type.html#921" class="Function">level-of</a> <a id="970" class="Symbol">{</a><a id="971" href="1Lab.Type.html#971" class="Bound">ℓ</a><a id="972" class="Symbol">}</a> <a id="974" class="Symbol">_</a> <a id="976" class="Symbol">=</a> <a id="978" href="1Lab.Type.html#971" class="Bound">ℓ</a>
 </pre>
 <h2 id="built-in-types"><a href="#built-in-types" class="header-link">Built-in Types<span class="header-link-emoji">🔗</span></a></h2>
 <p>Agda comes with built-in definitions for a bunch of types:</p>
-<pre class="Agda"><a id="1075" class="Keyword">open</a> <a id="1080" class="Keyword">import</a> <a id="1087" href="Agda.Builtin.Sigma.html" class="Module">Agda.Builtin.Sigma</a> <a id="1106" class="Keyword">hiding</a> <a id="1113" class="Symbol">(</a><a data-type="(A : Type a) (B : A → Type b) → Type (a ⊔ b)" id="1114" href="Agda.Builtin.Sigma.html#166" class="Record">Σ</a><a id="1115" class="Symbol">)</a> <a id="1117" class="Keyword">public</a>
-<a id="1124" class="Keyword">open</a> <a id="1129" class="Keyword">import</a> <a id="1136" href="Agda.Builtin.Unit.html" class="Module">Agda.Builtin.Unit</a> <a id="1154" class="Keyword">public</a>
-<a id="1161" class="Keyword">open</a> <a id="1166" class="Keyword">import</a> <a id="1173" href="Agda.Builtin.Bool.html" class="Module">Agda.Builtin.Bool</a> <a id="1191" class="Keyword">public</a>
-<a id="1198" class="Keyword">open</a> <a id="1203" class="Keyword">import</a> <a id="1210" href="Agda.Builtin.Nat.html" class="Module">Agda.Builtin.Nat</a> <a id="1227" class="Keyword">public</a>
+<pre class="Agda"><a id="1072" class="Keyword">open</a> <a id="1077" class="Keyword">import</a> <a id="1084" href="Agda.Builtin.Sigma.html" class="Module">Agda.Builtin.Sigma</a> <a id="1103" class="Keyword">hiding</a> <a id="1110" class="Symbol">(</a><a data-type="(A : Type a) (B₁ : A → Type b) → Type (a ⊔ b)" id="1111" href="Agda.Builtin.Sigma.html#166" class="Record">Σ</a><a id="1112" class="Symbol">)</a> <a id="1114" class="Keyword">public</a>
+<a id="1121" class="Keyword">open</a> <a id="1126" class="Keyword">import</a> <a id="1133" href="Agda.Builtin.Unit.html" class="Module">Agda.Builtin.Unit</a> <a id="1151" class="Keyword">public</a>
+<a id="1158" class="Keyword">open</a> <a id="1163" class="Keyword">import</a> <a id="1170" href="Agda.Builtin.Bool.html" class="Module">Agda.Builtin.Bool</a> <a id="1188" class="Keyword">public</a>
+<a id="1195" class="Keyword">open</a> <a id="1200" class="Keyword">import</a> <a id="1207" href="Agda.Builtin.Nat.html" class="Module">Agda.Builtin.Nat</a> <a id="1224" class="Keyword">hiding</a> <a id="1231" class="Symbol">(</a><a data-type="Nat → Nat → Bool" id="1232" href="Agda.Builtin.Nat.html#746" class="Primitive Operator">_&lt;_</a><a id="1235" class="Symbol">)</a> <a id="1237" class="Keyword">public</a>
 </pre>
 <p>It does not, however, come with a built-in definition of the empty type:</p>
-<pre class="Agda"><a id="1321" class="Keyword">data</a> <a id="⊥"></a><a data-type="Type" id="1326" href="1Lab.Type.html#1326" class="Datatype">⊥</a> <a id="1328" class="Symbol">:</a> <a id="1330" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="1335" class="Keyword">where</a>
+<pre class="Agda"><a id="1331" class="Keyword">data</a> <a id="⊥"></a><a data-type="Type" id="1336" href="1Lab.Type.html#1336" class="Datatype">⊥</a> <a id="1338" class="Symbol">:</a> <a id="1340" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="1345" class="Keyword">where</a>
 
-<a id="absurd"></a><a data-type="⊥ → A" id="1342" href="1Lab.Type.html#1342" class="Function">absurd</a> <a id="1349" class="Symbol">:</a> <a id="1351" class="Symbol">∀</a> <a id="1353" class="Symbol">{</a><a id="1354" href="1Lab.Type.html#1354" class="Bound">ℓ</a><a id="1355" class="Symbol">}</a> <a id="1357" class="Symbol">{</a><a id="1358" href="1Lab.Type.html#1358" class="Bound">A</a> <a id="1360" class="Symbol">:</a> <a id="1362" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="1367" href="1Lab.Type.html#1354" class="Bound">ℓ</a><a id="1368" class="Symbol">}</a> <a id="1370" class="Symbol">→</a> <a data-type="Type" id="1372" href="1Lab.Type.html#1326" class="Datatype">⊥</a> <a id="1374" class="Symbol">→</a> <a id="1376" href="1Lab.Type.html#1358" class="Bound">A</a>
-<a data-type="⊥ → A" id="1378" href="1Lab.Type.html#1342" class="Function">absurd</a> <a id="1385" class="Symbol">()</a>
+<a id="absurd"></a><a data-type="⊥ → A" id="1352" href="1Lab.Type.html#1352" class="Function">absurd</a> <a id="1359" class="Symbol">:</a> <a id="1361" class="Symbol">∀</a> <a id="1363" class="Symbol">{</a><a id="1364" href="1Lab.Type.html#1364" class="Bound">ℓ</a><a id="1365" class="Symbol">}</a> <a id="1367" class="Symbol">{</a><a id="1368" href="1Lab.Type.html#1368" class="Bound">A</a> <a id="1370" class="Symbol">:</a> <a id="1372" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="1377" href="1Lab.Type.html#1364" class="Bound">ℓ</a><a id="1378" class="Symbol">}</a> <a id="1380" class="Symbol">→</a> <a data-type="Type" id="1382" href="1Lab.Type.html#1336" class="Datatype">⊥</a> <a id="1384" class="Symbol">→</a> <a id="1386" href="1Lab.Type.html#1368" class="Bound">A</a>
+<a data-type="⊥ → A" id="1388" href="1Lab.Type.html#1352" class="Function">absurd</a> <a id="1395" class="Symbol">()</a>
 </pre>
-<p>The dependent sum of a family of types is notated by <span class="Agda"><a data-type="(A : Type a) (B : A → Type b) → Type (a ⊔ b)" href="Agda.Builtin.Sigma.html#166" class="Record">Σ</a></span>. The domain of the family is left implicit. We use a notation for when it must be made explicit.</p>
-<pre class="Agda"><a id="Σ"></a><a data-type="(B : A → Type b) → Type (a ⊔ b)" id="1563" href="1Lab.Type.html#1563" class="Function">Σ</a> <a id="1565" class="Symbol">:</a> <a id="1567" class="Symbol">∀</a> <a id="1569" class="Symbol">{</a><a id="1570" href="1Lab.Type.html#1570" class="Bound">a</a> <a id="1572" href="1Lab.Type.html#1572" class="Bound">b</a><a id="1573" class="Symbol">}</a> <a id="1575" class="Symbol">{</a><a id="1576" href="1Lab.Type.html#1576" class="Bound">A</a> <a id="1578" class="Symbol">:</a> <a id="1580" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="1585" href="1Lab.Type.html#1570" class="Bound">a</a><a id="1586" class="Symbol">}</a> <a id="1588" class="Symbol">(</a><a id="1589" href="1Lab.Type.html#1589" class="Bound">B</a> <a id="1591" class="Symbol">:</a> <a id="1593" href="1Lab.Type.html#1576" class="Bound">A</a> <a id="1595" class="Symbol">→</a> <a id="1597" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="1602" href="1Lab.Type.html#1572" class="Bound">b</a><a id="1603" class="Symbol">)</a> <a id="1605" class="Symbol">→</a> <a id="1607" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="1612" class="Symbol">_</a>
-<a data-type="(B : A → Type b) → Type (a ⊔ b)" id="1614" href="1Lab.Type.html#1563" class="Function">Σ</a> <a id="1616" class="Symbol">=</a> <a data-type="(A : Type a) (B : A → Type b) → Type (a ⊔ b)" id="1618" href="Agda.Builtin.Sigma.html#166" class="Record">Agda.Builtin.Sigma.Σ</a> <a id="1639" class="Symbol">_</a>
+<p>The dependent sum of a family of types is notated by <span class="Agda"><a data-type="(A : Type a) (B₁ : A → Type b) → Type (a ⊔ b)" href="Agda.Builtin.Sigma.html#166" class="Record">Σ</a></span>. The domain of the family is left implicit. We use a notation for when it must be made explicit.</p>
+<pre class="Agda"><a id="Σ"></a><a data-type="(B₁ : A → Type b) → Type (a ⊔ b)" id="1573" href="1Lab.Type.html#1573" class="Function">Σ</a> <a id="1575" class="Symbol">:</a> <a id="1577" class="Symbol">∀</a> <a id="1579" class="Symbol">{</a><a id="1580" href="1Lab.Type.html#1580" class="Bound">a</a> <a id="1582" href="1Lab.Type.html#1582" class="Bound">b</a><a id="1583" class="Symbol">}</a> <a id="1585" class="Symbol">{</a><a id="1586" href="1Lab.Type.html#1586" class="Bound">A</a> <a id="1588" class="Symbol">:</a> <a id="1590" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="1595" href="1Lab.Type.html#1580" class="Bound">a</a><a id="1596" class="Symbol">}</a> <a id="1598" class="Symbol">(</a><a id="1599" href="1Lab.Type.html#1599" class="Bound">B</a> <a id="1601" class="Symbol">:</a> <a id="1603" href="1Lab.Type.html#1586" class="Bound">A</a> <a id="1605" class="Symbol">→</a> <a id="1607" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="1612" href="1Lab.Type.html#1582" class="Bound">b</a><a id="1613" class="Symbol">)</a> <a id="1615" class="Symbol">→</a> <a id="1617" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="1622" class="Symbol">_</a>
+<a data-type="(B₁ : A → Type b) → Type (a ⊔ b)" id="1624" href="1Lab.Type.html#1573" class="Function">Σ</a> <a id="1626" class="Symbol">=</a> <a data-type="(A : Type a) (B₁ : A → Type b) → Type (a ⊔ b)" id="1628" href="Agda.Builtin.Sigma.html#166" class="Record">Agda.Builtin.Sigma.Σ</a> <a id="1649" class="Symbol">_</a>
 
-<a id="1642" class="Keyword">module</a> <a id="Σ"></a><a data-type="(B : A → Type b) → Type (a ⊔ b)" id="1649" href="1Lab.Type.html#1649" class="Module">Σ</a> <a id="1651" class="Symbol">=</a> <a data-type="(A : Type a) (B : A → Type b) → Type (a ⊔ b)" id="1653" href="Agda.Builtin.Sigma.html#166" class="Module">Agda.Builtin.Sigma.Σ</a>
+<a id="1652" class="Keyword">module</a> <a id="Σ"></a><a id="1659" href="1Lab.Type.html#1659" class="Module">Σ</a> <a id="1661" class="Symbol">=</a> <a data-type="(A : Type a) (B₁ : A → Type b) → Type (a ⊔ b)" id="1663" href="Agda.Builtin.Sigma.html#166" class="Module">Agda.Builtin.Sigma.Σ</a>
 
-<a id="1675" class="Keyword">syntax</a> <a data-type="(B : A → Type b) → Type (a ⊔ b)" id="1682" href="1Lab.Type.html#1563" class="Function">Σ</a> <a id="1684" class="Symbol">{</a><a id="1685" class="Argument">A</a> <a id="1687" class="Symbol">=</a> <a id="1689" class="Bound">A</a><a id="1690" class="Symbol">}</a> <a id="1692" class="Symbol">(λ</a> <a id="1695" class="Bound">x</a> <a id="1697" class="Symbol">→</a> <a id="1699" class="Bound">B</a><a id="1700" class="Symbol">)</a> <a id="1702" class="Symbol">=</a> <a id="1704" class="Function">Σ[</a> <a id="1707" class="Bound">x</a> <a id="1709" class="Function">∈</a> <a id="1711" class="Bound">A</a> <a id="1713" class="Function">]</a> <a id="1715" class="Bound">B</a>
-<a id="1717" class="Keyword">infix</a> <a id="1723" class="Number">5</a> <a data-type="(B : A → Type b) → Type (a ⊔ b)" id="1725" href="1Lab.Type.html#1563" class="Function">Σ</a>
+<a id="1685" class="Keyword">syntax</a> <a data-type="(B₁ : A → Type b) → Type (a ⊔ b)" id="1692" href="1Lab.Type.html#1573" class="Function">Σ</a> <a id="1694" class="Symbol">{</a><a id="1695" class="Argument">A</a> <a id="1697" class="Symbol">=</a> <a id="1699" class="Bound">A</a><a id="1700" class="Symbol">}</a> <a id="1702" class="Symbol">(λ</a> <a id="1705" class="Bound">x</a> <a id="1707" class="Symbol">→</a> <a id="1709" class="Bound">B</a><a id="1710" class="Symbol">)</a> <a id="1712" class="Symbol">=</a> <a id="1714" class="Function">Σ[</a> <a id="1717" class="Bound">x</a> <a id="1719" class="Function">∈</a> <a id="1721" class="Bound">A</a> <a id="1723" class="Function">]</a> <a id="1725" class="Bound">B</a>
+<a id="1727" class="Keyword">infix</a> <a id="1733" class="Number">5</a> <a data-type="(B₁ : A → Type b) → Type (a ⊔ b)" id="1735" href="1Lab.Type.html#1573" class="Function">Σ</a>
 </pre>
-<p>The non-dependent product type <span class="Agda"><a data-type="Type a → Type b → Type (a ⊔ b)" href="1Lab.Type.html#1836" class="Function Operator">_×_</a></span> can be defined in terms of the dependent sum type:</p>
-<pre class="Agda"><a id="_×_"></a><a data-type="Type a → Type b → Type (a ⊔ b)" id="1836" href="1Lab.Type.html#1836" class="Function Operator">_×_</a> <a id="1840" class="Symbol">:</a> <a id="1842" class="Symbol">∀</a> <a id="1844" class="Symbol">{</a><a id="1845" href="1Lab.Type.html#1845" class="Bound">a</a> <a id="1847" href="1Lab.Type.html#1847" class="Bound">b</a><a id="1848" class="Symbol">}</a> <a id="1850" class="Symbol">→</a> <a id="1852" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="1857" href="1Lab.Type.html#1845" class="Bound">a</a> <a id="1859" class="Symbol">→</a> <a id="1861" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="1866" href="1Lab.Type.html#1847" class="Bound">b</a> <a id="1868" class="Symbol">→</a> <a id="1870" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="1875" class="Symbol">_</a>
-<a id="1877" href="1Lab.Type.html#1877" class="Bound">A</a> <a data-type="Type a → Type b → Type (a ⊔ b)" id="1879" href="1Lab.Type.html#1836" class="Function Operator">×</a> <a id="1881" href="1Lab.Type.html#1881" class="Bound">B</a> <a id="1883" class="Symbol">=</a> <a data-type="(B : A → Type b) → Type (a ⊔ b)" id="1885" href="1Lab.Type.html#1563" class="Function">Σ[</a> <a id="1888" href="1Lab.Type.html#1888" class="Bound">_</a> <a data-type="(B : A → Type b) → Type (a ⊔ b)" id="1890" href="1Lab.Type.html#1563" class="Function">∈</a> <a id="1892" href="1Lab.Type.html#1877" class="Bound">A</a> <a data-type="(B : A → Type b) → Type (a ⊔ b)" id="1894" href="1Lab.Type.html#1563" class="Function">]</a> <a id="1896" href="1Lab.Type.html#1881" class="Bound">B</a>
+<p>The non-dependent product type <span class="Agda"><a data-type="Type a → Type b → Type (a ⊔ b)" href="1Lab.Type.html#1846" class="Function Operator">_×_</a></span> can be defined in terms of the dependent sum type:</p>
+<pre class="Agda"><a id="_×_"></a><a data-type="Type a → Type b → Type (a ⊔ b)" id="1846" href="1Lab.Type.html#1846" class="Function Operator">_×_</a> <a id="1850" class="Symbol">:</a> <a id="1852" class="Symbol">∀</a> <a id="1854" class="Symbol">{</a><a id="1855" href="1Lab.Type.html#1855" class="Bound">a</a> <a id="1857" href="1Lab.Type.html#1857" class="Bound">b</a><a id="1858" class="Symbol">}</a> <a id="1860" class="Symbol">→</a> <a id="1862" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="1867" href="1Lab.Type.html#1855" class="Bound">a</a> <a id="1869" class="Symbol">→</a> <a id="1871" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="1876" href="1Lab.Type.html#1857" class="Bound">b</a> <a id="1878" class="Symbol">→</a> <a id="1880" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="1885" class="Symbol">_</a>
+<a id="1887" href="1Lab.Type.html#1887" class="Bound">A</a> <a data-type="Type a → Type b → Type (a ⊔ b)" id="1889" href="1Lab.Type.html#1846" class="Function Operator">×</a> <a id="1891" href="1Lab.Type.html#1891" class="Bound">B</a> <a id="1893" class="Symbol">=</a> <a data-type="(B₁ : A → Type b) → Type (a ⊔ b)" id="1895" href="1Lab.Type.html#1573" class="Function">Σ[</a> <a id="1898" href="1Lab.Type.html#1898" class="Bound">_</a> <a data-type="(B₁ : A → Type b) → Type (a ⊔ b)" id="1900" href="1Lab.Type.html#1573" class="Function">∈</a> <a id="1902" href="1Lab.Type.html#1887" class="Bound">A</a> <a data-type="(B₁ : A → Type b) → Type (a ⊔ b)" id="1904" href="1Lab.Type.html#1573" class="Function">]</a> <a id="1906" href="1Lab.Type.html#1891" class="Bound">B</a>
 
-<a id="1899" class="Keyword">infixr</a> <a id="1906" class="Number">4</a> <a data-type="Type a → Type b → Type (a ⊔ b)" id="1908" href="1Lab.Type.html#1836" class="Function Operator">_×_</a>
+<a id="1909" class="Keyword">infixr</a> <a id="1916" class="Number">4</a> <a data-type="Type a → Type b → Type (a ⊔ b)" id="1918" href="1Lab.Type.html#1846" class="Function Operator">_×_</a>
 </pre>
 <h2 id="lifting"><a href="#lifting" class="header-link">Lifting<span class="header-link-emoji">🔗</span></a></h2>
 <p>There is a function which lifts a type to a higher universe:</p>
-<pre class="Agda"><a id="1999" class="Keyword">record</a> <a id="Lift"></a><a data-type="(ℓ : Level) (A : Type a) → Type (a ⊔ ℓ)" id="2006" href="1Lab.Type.html#2006" class="Record">Lift</a> <a id="2011" class="Symbol">{</a><a id="2012" href="1Lab.Type.html#2012" class="Bound">a</a><a id="2013" class="Symbol">}</a> <a id="2015" href="1Lab.Type.html#2015" class="Bound">ℓ</a> <a id="2017" class="Symbol">(</a><a id="2018" href="1Lab.Type.html#2018" class="Bound">A</a> <a id="2020" class="Symbol">:</a> <a id="2022" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="2027" href="1Lab.Type.html#2012" class="Bound">a</a><a id="2028" class="Symbol">)</a> <a id="2030" class="Symbol">:</a> <a id="2032" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="2037" class="Symbol">(</a><a id="2038" href="1Lab.Type.html#2012" class="Bound">a</a> <a data-type="Level → Level → Level" id="2040" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="2042" href="1Lab.Type.html#2015" class="Bound">ℓ</a><a id="2043" class="Symbol">)</a> <a id="2045" class="Keyword">where</a>
-  <a id="2053" class="Keyword">constructor</a> <a id="lift"></a><a data-type="(lower : A) → Lift ℓ A" id="2065" href="1Lab.Type.html#2065" class="InductiveConstructor">lift</a>
-  <a id="2072" class="Keyword">field</a>
-    <a id="Lift.lower"></a><a id="2082" href="1Lab.Type.html#2082" class="Field">lower</a> <a id="2088" class="Symbol">:</a> <a id="2090" href="1Lab.Type.html#2018" class="Bound">A</a>
+<pre class="Agda"><a id="2009" class="Keyword">record</a> <a id="Lift"></a><a data-type="(ℓ : Level) (A : Type a) → Type (a ⊔ ℓ)" id="2016" href="1Lab.Type.html#2016" class="Record">Lift</a> <a id="2021" class="Symbol">{</a><a id="2022" href="1Lab.Type.html#2022" class="Bound">a</a><a id="2023" class="Symbol">}</a> <a id="2025" href="1Lab.Type.html#2025" class="Bound">ℓ</a> <a id="2027" class="Symbol">(</a><a id="2028" href="1Lab.Type.html#2028" class="Bound">A</a> <a id="2030" class="Symbol">:</a> <a id="2032" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="2037" href="1Lab.Type.html#2022" class="Bound">a</a><a id="2038" class="Symbol">)</a> <a id="2040" class="Symbol">:</a> <a id="2042" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="2047" class="Symbol">(</a><a id="2048" href="1Lab.Type.html#2022" class="Bound">a</a> <a data-type="Level → Level → Level" id="2050" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="2052" href="1Lab.Type.html#2025" class="Bound">ℓ</a><a id="2053" class="Symbol">)</a> <a id="2055" class="Keyword">where</a>
+  <a id="2063" class="Keyword">constructor</a> <a id="lift"></a><a data-type="(lower : A) → Lift ℓ A" id="2075" href="1Lab.Type.html#2075" class="InductiveConstructor">lift</a>
+  <a id="2082" class="Keyword">field</a>
+    <a id="Lift.lower"></a><a data-type="Lift ℓ A → A" id="2092" href="1Lab.Type.html#2092" class="Field">lower</a> <a id="2098" class="Symbol">:</a> <a id="2100" href="1Lab.Type.html#2028" class="Bound">A</a>
 </pre>
 <h2 id="function-composition"><a href="#function-composition" class="header-link">Function composition<span class="header-link-emoji">🔗</span></a></h2>
 <p>Since the following definitions are fundamental, they deserve a place in this module:</p>
-<pre class="Agda"><a id="_∘_"></a><a data-type="(B → C) → (A → B) → A → C" id="2217" href="1Lab.Type.html#2217" class="Function Operator">_∘_</a> <a id="2221" class="Symbol">:</a> <a id="2223" class="Symbol">∀</a> <a id="2225" class="Symbol">{</a><a id="2226" href="1Lab.Type.html#2226" class="Bound">ℓ₁</a> <a id="2229" href="1Lab.Type.html#2229" class="Bound">ℓ₂</a> <a id="2232" href="1Lab.Type.html#2232" class="Bound">ℓ₃</a><a id="2234" class="Symbol">}</a> <a id="2236" class="Symbol">{</a><a id="2237" href="1Lab.Type.html#2237" class="Bound">A</a> <a id="2239" class="Symbol">:</a> <a id="2241" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="2246" href="1Lab.Type.html#2226" class="Bound">ℓ₁</a><a id="2248" class="Symbol">}</a> <a id="2250" class="Symbol">{</a><a id="2251" href="1Lab.Type.html#2251" class="Bound">B</a> <a id="2253" class="Symbol">:</a> <a id="2255" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="2260" href="1Lab.Type.html#2229" class="Bound">ℓ₂</a><a id="2262" class="Symbol">}</a> <a id="2264" class="Symbol">{</a><a id="2265" href="1Lab.Type.html#2265" class="Bound">C</a> <a id="2267" class="Symbol">:</a> <a id="2269" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="2274" href="1Lab.Type.html#2232" class="Bound">ℓ₃</a><a id="2276" class="Symbol">}</a>
-    <a id="2282" class="Symbol">→</a> <a id="2284" class="Symbol">(</a><a id="2285" href="1Lab.Type.html#2251" class="Bound">B</a> <a id="2287" class="Symbol">→</a> <a id="2289" href="1Lab.Type.html#2265" class="Bound">C</a><a id="2290" class="Symbol">)</a> <a id="2292" class="Symbol">→</a> <a id="2294" class="Symbol">(</a><a id="2295" href="1Lab.Type.html#2237" class="Bound">A</a> <a id="2297" class="Symbol">→</a> <a id="2299" href="1Lab.Type.html#2251" class="Bound">B</a><a id="2300" class="Symbol">)</a> <a id="2302" class="Symbol">→</a> <a id="2304" href="1Lab.Type.html#2237" class="Bound">A</a> <a id="2306" class="Symbol">→</a> <a id="2308" href="1Lab.Type.html#2265" class="Bound">C</a>
-<a id="2310" href="1Lab.Type.html#2310" class="Bound">f</a> <a data-type="(B → C) → (A → B) → A → C" id="2312" href="1Lab.Type.html#2217" class="Function Operator">∘</a> <a id="2314" href="1Lab.Type.html#2314" class="Bound">g</a> <a id="2316" class="Symbol">=</a> <a id="2318" class="Symbol">λ</a> <a id="2320" href="1Lab.Type.html#2320" class="Bound">z</a> <a id="2322" class="Symbol">→</a> <a id="2324" href="1Lab.Type.html#2310" class="Bound">f</a> <a id="2326" class="Symbol">(</a><a id="2327" href="1Lab.Type.html#2314" class="Bound">g</a> <a id="2329" href="1Lab.Type.html#2320" class="Bound">z</a><a id="2330" class="Symbol">)</a>
+<pre class="Agda"><a id="_∘_"></a><a data-type="((y : B₁ x) → C x y) → (f : (x : A) → B₁ x) (x : A) → C x (f x)" id="2227" href="1Lab.Type.html#2227" class="Function Operator">_∘_</a> <a id="2231" class="Symbol">:</a> <a id="2233" class="Symbol">∀</a> <a id="2235" class="Symbol">{</a><a id="2236" href="1Lab.Type.html#2236" class="Bound">ℓ₁</a> <a id="2239" href="1Lab.Type.html#2239" class="Bound">ℓ₂</a> <a id="2242" href="1Lab.Type.html#2242" class="Bound">ℓ₃</a><a id="2244" class="Symbol">}</a> <a id="2246" class="Symbol">{</a><a id="2247" href="1Lab.Type.html#2247" class="Bound">A</a> <a id="2249" class="Symbol">:</a> <a id="2251" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="2256" href="1Lab.Type.html#2236" class="Bound">ℓ₁</a><a id="2258" class="Symbol">}</a> <a id="2260" class="Symbol">{</a><a id="2261" href="1Lab.Type.html#2261" class="Bound">B</a> <a id="2263" class="Symbol">:</a> <a id="2265" href="1Lab.Type.html#2247" class="Bound">A</a> <a id="2267" class="Symbol">→</a> <a id="2269" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="2274" href="1Lab.Type.html#2239" class="Bound">ℓ₂</a><a id="2276" class="Symbol">}</a> <a id="2278" class="Symbol">{</a><a id="2279" href="1Lab.Type.html#2279" class="Bound">C</a> <a id="2281" class="Symbol">:</a> <a id="2283" class="Symbol">(</a><a id="2284" href="1Lab.Type.html#2284" class="Bound">x</a> <a id="2286" class="Symbol">:</a> <a id="2288" href="1Lab.Type.html#2247" class="Bound">A</a><a id="2289" class="Symbol">)</a> <a id="2291" class="Symbol">→</a> <a id="2293" href="1Lab.Type.html#2261" class="Bound">B</a> <a id="2295" href="1Lab.Type.html#2284" class="Bound">x</a> <a id="2297" class="Symbol">→</a> <a id="2299" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="2304" href="1Lab.Type.html#2242" class="Bound">ℓ₃</a><a id="2306" class="Symbol">}</a>
+    <a id="2312" class="Symbol">→</a> <a id="2314" class="Symbol">(∀</a> <a id="2317" class="Symbol">{</a><a id="2318" href="1Lab.Type.html#2318" class="Bound">x</a><a id="2319" class="Symbol">}</a> <a id="2321" class="Symbol">→</a> <a id="2323" class="Symbol">(</a><a id="2324" href="1Lab.Type.html#2324" class="Bound">y</a> <a id="2326" class="Symbol">:</a> <a id="2328" href="1Lab.Type.html#2261" class="Bound">B</a> <a id="2330" href="1Lab.Type.html#2318" class="Bound">x</a><a id="2331" class="Symbol">)</a> <a id="2333" class="Symbol">→</a> <a id="2335" href="1Lab.Type.html#2279" class="Bound">C</a> <a id="2337" href="1Lab.Type.html#2318" class="Bound">x</a> <a id="2339" href="1Lab.Type.html#2324" class="Bound">y</a><a id="2340" class="Symbol">)</a>
+    <a id="2346" class="Symbol">→</a> <a id="2348" class="Symbol">(</a><a id="2349" href="1Lab.Type.html#2349" class="Bound">f</a> <a id="2351" class="Symbol">:</a> <a id="2353" class="Symbol">∀</a> <a id="2355" href="1Lab.Type.html#2355" class="Bound">x</a> <a id="2357" class="Symbol">→</a> <a id="2359" href="1Lab.Type.html#2261" class="Bound">B</a> <a id="2361" href="1Lab.Type.html#2355" class="Bound">x</a><a id="2362" class="Symbol">)</a>
+    <a id="2368" class="Symbol">→</a> <a id="2370" class="Symbol">∀</a> <a id="2372" href="1Lab.Type.html#2372" class="Bound">x</a> <a id="2374" class="Symbol">→</a> <a id="2376" href="1Lab.Type.html#2279" class="Bound">C</a> <a id="2378" href="1Lab.Type.html#2372" class="Bound">x</a> <a id="2380" class="Symbol">(</a><a id="2381" href="1Lab.Type.html#2349" class="Bound">f</a> <a id="2383" href="1Lab.Type.html#2372" class="Bound">x</a><a id="2384" class="Symbol">)</a>
+<a id="2386" href="1Lab.Type.html#2386" class="Bound">f</a> <a data-type="((y : B₁ x) → C x y) → (f : (x : A) → B₁ x) (x : A) → C x (f x)" id="2388" href="1Lab.Type.html#2227" class="Function Operator">∘</a> <a id="2390" href="1Lab.Type.html#2390" class="Bound">g</a> <a id="2392" class="Symbol">=</a> <a id="2394" class="Symbol">λ</a> <a id="2396" href="1Lab.Type.html#2396" class="Bound">z</a> <a id="2398" class="Symbol">→</a> <a id="2400" href="1Lab.Type.html#2386" class="Bound">f</a> <a id="2402" class="Symbol">(</a><a id="2403" href="1Lab.Type.html#2390" class="Bound">g</a> <a id="2405" href="1Lab.Type.html#2396" class="Bound">z</a><a id="2406" class="Symbol">)</a>
 
-<a id="2333" class="Keyword">infixr</a> <a id="2340" class="Number">40</a> <a data-type="(B → C) → (A → B) → A → C" id="2343" href="1Lab.Type.html#2217" class="Function Operator">_∘_</a>
+<a id="2409" class="Keyword">infixr</a> <a id="2416" class="Number">40</a> <a data-type="((y : B₁ x) → C x y) → (f : (x : A) → B₁ x) (x : A) → C x (f x)" id="2419" href="1Lab.Type.html#2227" class="Function Operator">_∘_</a>
 
-<a id="id"></a><a data-type="A → A" id="2348" href="1Lab.Type.html#2348" class="Function">id</a> <a id="2351" class="Symbol">:</a> <a id="2353" class="Symbol">∀</a> <a id="2355" class="Symbol">{</a><a id="2356" href="1Lab.Type.html#2356" class="Bound">ℓ</a><a id="2357" class="Symbol">}</a> <a id="2359" class="Symbol">{</a><a id="2360" href="1Lab.Type.html#2360" class="Bound">A</a> <a id="2362" class="Symbol">:</a> <a id="2364" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="2369" href="1Lab.Type.html#2356" class="Bound">ℓ</a><a id="2370" class="Symbol">}</a> <a id="2372" class="Symbol">→</a> <a id="2374" href="1Lab.Type.html#2360" class="Bound">A</a> <a id="2376" class="Symbol">→</a> <a id="2378" href="1Lab.Type.html#2360" class="Bound">A</a>
-<a data-type="A → A" id="2380" href="1Lab.Type.html#2348" class="Function">id</a> <a id="2383" href="1Lab.Type.html#2383" class="Bound">x</a> <a id="2385" class="Symbol">=</a> <a id="2387" href="1Lab.Type.html#2383" class="Bound">x</a>
+<a id="id"></a><a data-type="A → A" id="2424" href="1Lab.Type.html#2424" class="Function">id</a> <a id="2427" class="Symbol">:</a> <a id="2429" class="Symbol">∀</a> <a id="2431" class="Symbol">{</a><a id="2432" href="1Lab.Type.html#2432" class="Bound">ℓ</a><a id="2433" class="Symbol">}</a> <a id="2435" class="Symbol">{</a><a id="2436" href="1Lab.Type.html#2436" class="Bound">A</a> <a id="2438" class="Symbol">:</a> <a id="2440" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="2445" href="1Lab.Type.html#2432" class="Bound">ℓ</a><a id="2446" class="Symbol">}</a> <a id="2448" class="Symbol">→</a> <a id="2450" href="1Lab.Type.html#2436" class="Bound">A</a> <a id="2452" class="Symbol">→</a> <a id="2454" href="1Lab.Type.html#2436" class="Bound">A</a>
+<a data-type="A → A" id="2456" href="1Lab.Type.html#2424" class="Function">id</a> <a id="2459" href="1Lab.Type.html#2459" class="Bound">x</a> <a id="2461" class="Symbol">=</a> <a id="2463" href="1Lab.Type.html#2459" class="Bound">x</a>
+
+<a id="2466" class="Keyword">infixr</a> <a id="2473" class="Number">-1</a> <a data-type="((x : A) → B₁ x) → (x : A) → B₁ x" id="2476" href="1Lab.Type.html#2481" class="Function Operator">_$_</a>
+
+<a id="_$_"></a><a data-type="((x : A) → B₁ x) → (x : A) → B₁ x" id="2481" href="1Lab.Type.html#2481" class="Function Operator">_$_</a> <a id="2485" class="Symbol">:</a> <a id="2487" class="Symbol">∀</a> <a id="2489" class="Symbol">{</a><a id="2490" href="1Lab.Type.html#2490" class="Bound">ℓ₁</a> <a id="2493" href="1Lab.Type.html#2493" class="Bound">ℓ₂</a><a id="2495" class="Symbol">}</a> <a id="2497" class="Symbol">{</a><a id="2498" href="1Lab.Type.html#2498" class="Bound">A</a> <a id="2500" class="Symbol">:</a> <a id="2502" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="2507" href="1Lab.Type.html#2490" class="Bound">ℓ₁</a><a id="2509" class="Symbol">}</a> <a id="2511" class="Symbol">{</a><a id="2512" href="1Lab.Type.html#2512" class="Bound">B</a> <a id="2514" class="Symbol">:</a> <a id="2516" href="1Lab.Type.html#2498" class="Bound">A</a> <a id="2518" class="Symbol">→</a> <a id="2520" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="2525" href="1Lab.Type.html#2493" class="Bound">ℓ₂</a><a id="2527" class="Symbol">}</a> <a id="2529" class="Symbol">→</a> <a id="2531" class="Symbol">((</a><a id="2533" href="1Lab.Type.html#2533" class="Bound">x</a> <a id="2535" class="Symbol">:</a> <a id="2537" href="1Lab.Type.html#2498" class="Bound">A</a><a id="2538" class="Symbol">)</a> <a id="2540" class="Symbol">→</a> <a id="2542" href="1Lab.Type.html#2512" class="Bound">B</a> <a id="2544" href="1Lab.Type.html#2533" class="Bound">x</a><a id="2545" class="Symbol">)</a> <a id="2547" class="Symbol">→</a> <a id="2549" class="Symbol">((</a><a id="2551" href="1Lab.Type.html#2551" class="Bound">x</a> <a id="2553" class="Symbol">:</a> <a id="2555" href="1Lab.Type.html#2498" class="Bound">A</a><a id="2556" class="Symbol">)</a> <a id="2558" class="Symbol">→</a> <a id="2560" href="1Lab.Type.html#2512" class="Bound">B</a> <a id="2562" href="1Lab.Type.html#2551" class="Bound">x</a><a id="2563" class="Symbol">)</a>
+<a id="2565" href="1Lab.Type.html#2565" class="Bound">f</a> <a data-type="((x : A) → B₁ x) → (x : A) → B₁ x" id="2567" href="1Lab.Type.html#2481" class="Function Operator">$</a> <a id="2569" href="1Lab.Type.html#2569" class="Bound">x</a> <a id="2571" class="Symbol">=</a> <a id="2573" href="1Lab.Type.html#2565" class="Bound">f</a> <a id="2575" href="1Lab.Type.html#2569" class="Bound">x</a>
+<a id="2577" class="Symbol">{-#</a> <a id="2581" class="Keyword">INLINE</a> <a data-type="((x : A) → B₁ x) → (x : A) → B₁ x" id="2588" href="1Lab.Type.html#2481" class="Function Operator">_$_</a> <a id="2592" class="Symbol">#-}</a>
 </pre>
 <!--
-<pre class="Agda"><a id="2403" class="Keyword">open</a> <a id="2408" class="Keyword">import</a> <a id="2415" href="Agda.Builtin.FromNat.html" class="Module">Agda.Builtin.FromNat</a> <a id="2436" class="Keyword">public</a>
-<a id="2443" class="Keyword">open</a> <a id="2448" class="Keyword">import</a> <a id="2455" href="Agda.Builtin.FromNeg.html" class="Module">Agda.Builtin.FromNeg</a> <a id="2476" class="Keyword">public</a>
+<pre class="Agda"><a id="2610" class="Keyword">open</a> <a id="2615" class="Keyword">import</a> <a id="2622" href="Agda.Builtin.FromNat.html" class="Module">Agda.Builtin.FromNat</a> <a id="2643" class="Keyword">public</a>
+<a id="2650" class="Keyword">open</a> <a id="2655" class="Keyword">import</a> <a id="2662" href="Agda.Builtin.FromNeg.html" class="Module">Agda.Builtin.FromNeg</a> <a id="2683" class="Keyword">public</a>
 
-<a id="2484" class="Keyword">instance</a>
-  <a id="Number-Nat"></a><a id="2495" href="1Lab.Type.html#2495" class="Function">Number-Nat</a> <a id="2506" class="Symbol">:</a> <a id="2508" href="Agda.Builtin.FromNat.html#197" class="Record">Number</a> <a id="2515" href="Agda.Builtin.Nat.html#192" class="Datatype">Nat</a>
-  <a id="2521" href="1Lab.Type.html#2495" class="Function">Number-Nat</a> <a id="2532" class="Symbol">.</a><a id="2533" href="Agda.Builtin.FromNat.html#253" class="Field">Number.Constraint</a> <a id="2551" class="Symbol">_</a> <a id="2553" class="Symbol">=</a> <a id="2555" href="Agda.Builtin.Unit.html#164" class="Record">⊤</a>
-  <a id="2559" href="1Lab.Type.html#2495" class="Function">Number-Nat</a> <a id="2570" class="Symbol">.</a><a id="2571" href="Agda.Builtin.FromNat.html#282" class="Field">Number.fromNat</a> <a id="2586" href="1Lab.Type.html#2586" class="Bound">n</a> <a id="2588" class="Symbol">=</a> <a id="2590" href="1Lab.Type.html#2586" class="Bound">n</a>
+<a id="2691" class="Keyword">instance</a>
+  <a id="Number-Nat"></a><a id="2702" href="1Lab.Type.html#2702" class="Function">Number-Nat</a> <a id="2713" class="Symbol">:</a> <a id="2715" href="Agda.Builtin.FromNat.html#197" class="Record">Number</a> <a id="2722" href="Agda.Builtin.Nat.html#192" class="Datatype">Nat</a>
+  <a id="2728" href="1Lab.Type.html#2702" class="Function">Number-Nat</a> <a id="2739" class="Symbol">.</a><a id="2740" href="Agda.Builtin.FromNat.html#253" class="Field">Number.Constraint</a> <a id="2758" class="Symbol">_</a> <a id="2760" class="Symbol">=</a> <a id="2762" href="Agda.Builtin.Unit.html#164" class="Record">⊤</a>
+  <a id="2766" href="1Lab.Type.html#2702" class="Function">Number-Nat</a> <a id="2777" class="Symbol">.</a><a id="2778" href="Agda.Builtin.FromNat.html#282" class="Field">Number.fromNat</a> <a id="2793" href="1Lab.Type.html#2793" class="Bound">n</a> <a id="2795" class="Symbol">=</a> <a id="2797" href="1Lab.Type.html#2793" class="Bound">n</a>
+
+<a id="Type∙"></a><a id="2800" href="1Lab.Type.html#2800" class="Function">Type∙</a> <a id="2806" class="Symbol">:</a> <a id="2808" class="Symbol">∀</a> <a id="2810" href="1Lab.Type.html#2810" class="Bound">ℓ</a> <a id="2812" class="Symbol">→</a> <a id="2814" href="1Lab.Type.html#391" class="Primitive">Type</a> <a id="2819" class="Symbol">(</a><a id="2820" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="2825" href="1Lab.Type.html#2810" class="Bound">ℓ</a><a id="2826" class="Symbol">)</a>
+<a id="2828" href="1Lab.Type.html#2800" class="Function">Type∙</a> <a id="2834" class="Symbol">_</a> <a id="2836" class="Symbol">=</a> <a id="2838" href="1Lab.Type.html#1573" class="Function">Σ</a> <a id="2840" href="1Lab.Type.html#2424" class="Function">id</a>
 </pre>-->
   </article>
 </div>
